@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ConsultasController;
+use App\Http\Controllers\AreaController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,5 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('area/create',[AreaController::class,'create']);
+Route::post('area/store',[AreaController::class,'store'])->name('area.store');
 
-Route::get('/consultas',[ConsultasController::class, 'consulta_2']);
+
+
+
