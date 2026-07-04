@@ -18,4 +18,5 @@ class Aprendice extends Model
     public function computer(){
         return $this->belongsTo(Computer::class);
     }
+     protected $fillable=['name','email','cell_number','course_id','computer_id'];
 }

@@ -30,8 +30,7 @@ class AreaController extends Controller
 
     $area = new Area();
 
-    $area->name=$request->name;
-    $area->save();
+     $area=Area::create($request->all());
 
     return $area;
 

@@ -23,4 +23,6 @@ class Teacher extends Model
     public function courses(){
         return $this->belongsToMany(Course::class);
     }
+     protected $fillable=['name','email','area_id','training_center_id'];
+
 }

@@ -17,5 +17,22 @@ class TrainingCenterController extends Controller
         $centro = Training_center::find(1);
         return $centro->courses;
     }
+     public function create (){
 
+     return view('training_center.create');
+
+
+    }
+
+    public function store(Request $request){
+
+    $center = new Training_center();
+
+     $center=Training_center::create($request->all());
+
+    return $center;
+
+
+
+}
 }

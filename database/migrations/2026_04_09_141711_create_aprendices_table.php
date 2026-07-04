@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name', 100);
             $table->string('email', 100);
-            $table->integer('cell_number');
+            $table->string('cell_number');
             //FK1 
             $table->unsignedBigInteger('course_id')->nullable();
             $table->foreign('course_id')
